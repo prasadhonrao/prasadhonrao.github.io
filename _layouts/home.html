@@ -1,0 +1,24 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<!-- {% unless page.header.overlay_color or page.header.overlay_image %}
+    <h1 class="page__title">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts1" }}</h1>
+{% endunless %} -->
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
+
+{% include paginator.html %}
