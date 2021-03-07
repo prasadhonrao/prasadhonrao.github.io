@@ -14,7 +14,7 @@ This is the fifth and final article in JavaScript functions series. Earlier in t
 *   [Function Declaration]({{site.url}}/javascript/javascript-functions-part-1-function-declaration/index.html "JavaScript Functions Part 1 – Function Declaration")
 *   [Function Expression]({{site.url}}/javascript/javascript-functions-part-2-function-expression/index.html "JavaScript Functions Part 2 – Function Expression")
 *   [Anonymous Functions]({{site.url}}/javascript/javascript-functions-part-3-anonymous-functions/index.html "JavaScript Functions Part 3 – Anonymous Functions")
-*   [Immediately Invoked Function Expression [IIFE]]({{site.url}}/javascript/javascript-functions-part-4-immediately-invoked-function-expression-iife/index.html "JavaScript Functions Part 4 – Immediately Invoked Function Expression [IIFE]")
+*   [Immediately Invoked Function Expression [IIFE]]({{site.url}}/javascript/javascript-functions-part-4-iife/index.html "JavaScript Functions Part 4 – Immediately Invoked Function Expression [IIFE]")
 
 Today we will focus on constructor functions.
 
