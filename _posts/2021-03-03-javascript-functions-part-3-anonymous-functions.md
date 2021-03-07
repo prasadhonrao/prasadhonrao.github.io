@@ -11,15 +11,17 @@ classes: wide
 
 Welcome to JavaScript Functions series. Earlier in the series we have covered –
 
-*   [Function Declaration](https://www.iamprasad.com/blog/javascript-functions-part-1-function-declaration/index.html "JavaScript Functions Part 1 – Function Declaration")
-*   [Function Expression](https://www.iamprasad.com/blog/javascript-functions-part-2-function-expression/index.html "JavaScript Functions Part 2 – Function Expression")
+*   [Function Declaration]({{site.url}}/javascript/javascript-functions-part-1-function-declaration/index.html "JavaScript Functions Part 1 – Function Declaration")
+*   [Function Expression]({{site.url}}/javascript/javascript-functions-part-2-function-expression/index.html "JavaScript Functions Part 2 – Function Expression")
 
 In this article we will focus on Anonymous Functions.
 
-## Anonymous Functions 
+## Anonymous Functions
+
 As the name suggests anonymous functions are functions without any given name. Now, you might be thinking how is it even possible and most importantly useful? If we define a function without any name, how can we even call it? Well, in large scale JavaScript programs anonymous functions plays important role, however we will see there are some gotchas associated with it and it is not always recommended to use anonymous functions. So, let’s first understand how to declare these types of functions. JavaScript provides different ways to declare an anonymous function in a program. We will cover commonly used options in this article.
 
 ## Anonymous Functions Declaration
+
 Anonymous functions can be declared similar as function expression syntax, except that the function is declared without any name. In either case, once you assign a function to a variable [`log` as shown in below example], you have to use the assigned variable to call the function.
 
 ```javascript
@@ -89,6 +91,7 @@ setTimeout(say, 1000);
 I personally prefer declaring the functions upfront and then passing it as an argument to other functions, as it makes code more readable and easier to debug.
 
 ## Anonymous Functions As Callback Functions
+
 Anonymous functions are commonly used as callback functions in many JavaScript frameworks and libraries. Popular JavaScript framework **Node.js** heavily uses anonymous functions feature of the language. Below code snippet creates a simple HTTP server using http module’s `createServer` method.  
 
 ```javascript

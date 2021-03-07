@@ -11,9 +11,9 @@ classes: wide
 
 Welcome back to JavaScript Functions series. Earlier in the series we have covered - 
 
-*   [Function Declaration](https://www.iamprasad.com/blog/javascript-functions-part-1-function-declaration/index.html "JavaScript Functions Part 1 – Function Declaration")
-*   [Function Expression](https://www.iamprasad.com/blog/javascript-functions-part-2-function-expression/index.html "JavaScript Functions Part 2 – Function Expression")
-*   [Anonymous Functions](https://www.iamprasad.com/blog/javascript-functions-part-3-anonymous-functions/index.html "JavaScript Functions Part 3 – Anonymous Functions")
+*   [Function Declaration]({{site.url}}/javascript/javascript-functions-part-1-function-declaration/index.html "JavaScript Functions Part 1 – Function Declaration")
+*   [Function Expression]({{site.url}}/javascript/javascript-functions-part-2-function-expression/index.html "JavaScript Functions Part 2 – Function Expression")
+*   [Anonymous Functions]({{site.url}}/javascript/javascript-functions-part-3-anonymous-functions/index.html "JavaScript Functions Part 3 – Anonymous Functions")
 
 In this article we will focus on IIFE.
 
@@ -36,6 +36,7 @@ var payroll = function() {
     var makePayment = function () {
         console.log("In makePayment function");
     };
+    
     var calculcateOverTime = function () {
         console.log("In calculateOverTime function");
     };
@@ -49,9 +50,11 @@ var payroll = function() {
     var makePayment = function () {
         console.log("In makePayment function");
     };
+    
     var calculateOverTime = function () {
         console.log("In calculateOverTime function");
     };
+    
     return {
         MakePayment : makePayment,
         CalculateOverTime : calculateOverTime
@@ -74,14 +77,17 @@ var payroll = function() {
     var audit = function(info) {
         console.log("Auditing information " + info)
     };
+    
     var makePayment = function () {
         console.log("In makePayment function");
         audit("success");
     };
+    
     var calculcateOverTime = function () {
         console.log("In calculateOverTime function");
         audit("success");
     };
+    
     return {
         MakePayment : makePayment,
         CalculateOverTime : calculcateOverTime
@@ -115,14 +121,17 @@ var payroll = (function() {
     var audit = function(info) {
         console.log("Auditing information " + info)
     }
+    
     var makePayment = function () {
         console.log("In makePayment function");
         audit("success");
     };
+    
     var calculcateOverTime = function () {
         console.log("In calculateOverTime function");
         audit("success");
     };
+    
     return {
         MakePayment : makePayment,
         CalculateOverTime : calculcateOverTime

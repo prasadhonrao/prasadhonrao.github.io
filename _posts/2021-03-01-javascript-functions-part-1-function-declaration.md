@@ -23,10 +23,10 @@ Code listing shown below defines a `logMessage` function, which logs the value o
 
 {% highlight javascript %}
 
-function logMessage(message){
-    console.log(message);
-}
-logMessage("JavaScript is my favorite language.");
+    function logMessage(message){
+        console.log(message);
+    }
+    logMessage("JavaScript is my favorite language.");
 
 {% endhighlight %}
 
@@ -37,10 +37,12 @@ In the function declaration syntax, you must provide function name [`logMessage`
 In traditional programming languages like C# or Java, you need to define a function first before you can call it. JavaScript however works differently. Let’s update our code listing and call the `logMessage` function before its declaration.
 
 {% highlight javascript %}
-logMessage("JavaScript is my favorite language.");
-function logMessage(message){
-    console.log(message);
-}
+
+    logMessage("JavaScript is my favorite language.");
+    function logMessage(message){
+        console.log(message);
+    }
+
 {% endhighlight %}
 
 
@@ -49,27 +51,43 @@ If you execute the code, program will not throw any exception and will simply lo
 **Function hoisting** is the process in which JavaScript runtime hoists all the functions declared using function declaration syntax at the top of JavaScript file. So internally, even though you have called `logMessage` function before its declaration, JavaScript engine internally hoisted it at the top, so call to `logMessage` function gets executed without any error.
 
 ### Trap 2 – Readability
+
 Function declaration syntax and dynamic nature of JavaScript language can sometimes impacts program readability. Again, let the code do the talking.
 
 {% highlight javascript %}
-function print(input) {
-    console.log("Print was called with value " + input);
-}
-print(10);
-function print(input) {
-    console.log("Redefining print with value " + input);
-}
-print(20);
+
+    function print(input) {
+        console.log("Print was called with value " + input);
+    }
+    
+    print(10);
+    
+    function print(input) {
+        console.log("Redefining print with value " + input);
+    }
+    
+    print(20);
+
 {% endhighlight %}
 
 
-If you read above program, you would think that it will log messages as shown below
+If you read above program, you might think that it will log messages as shown below
 
-** TODO - Add Image
+{% highlight ruby %}
+
+    Print was called with value  10
+    Redefining print with value  20
+
+{% endhighlight %}
 
 Unfortunately that is not the case, and again it’s related with function hoisting trap we discussed earlier. All the functions declared using function declaration syntax gets hoisted, so second `print` function overwrites first `print` function, so when you call `print` function with values 10 and 20 respectively, it will always get the overridden function and display the output as shown below.
 
-** TODO - Add Image
+{% highlight ruby %}
+
+    Redefining print with value  10
+    Redefining print with value  20
+
+{% endhighlight %}
 
 So keep in mind, what you read and think is not what you always get in JavaScript. :)
 

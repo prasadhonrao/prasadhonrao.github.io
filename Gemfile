@@ -16,3 +16,5 @@ gem "jekyll-include-cache", group: :jekyll_plugins
 #   gem "jekyll-include-cache"
 #   gem "jekyll-algolia"
 # end
+
+gem "webrick", "~> 1.7"

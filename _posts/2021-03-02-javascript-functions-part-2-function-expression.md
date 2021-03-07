@@ -11,7 +11,8 @@ classes: wide
 
 Welcome to JavaScript Function series. 
 
-In [part 1](https://www.iamprasad.com/blog/javascript-functions-part-1-function-declaration/index.html "JavaScript Functions Part 1 – Function Declaration"), we discussed Function Declaration syntax in JavaScript and few traps associated with it. In this article we will discuss JavaScript Function Expression.
+
+In [part 1]({{site.url}}/javascript/javascript-functions-part-1-function-declaration/ "JavaScript Functions Part 1 – Function Declaration"), we discussed Function Declaration syntax in JavaScript and few traps associated with it. In this article we will discuss JavaScript Function Expression.
 
 ## Function Expression
 
@@ -21,6 +22,7 @@ A function expression has similar syntax as function declaration except that fun
 var log = function logMessage(message) {
     console.log(message);
 }
+
 log("This is a function expression");
 ```
 
@@ -30,9 +32,11 @@ So you might be thinking, JavaScript runtime must be doing function hoisting in 
 
 ```javascript
 var log;
+
 log = function logMessage(message) {
     console.log(message);
 }
+
 log("This is a function expression");
 ```
 
@@ -40,23 +44,29 @@ Note again, it doesn’t hoist function definition completely. It just hoists th
 
 ```javascript
 var log;
+
 log("JavaScript is my favorite language"); // error
+
 log = function logMessage(message){
 	console.log(message);
 }
 ```
 
 ## Readability trap? – Not any more
+
 Let’s take a look at readability trap we discussed in function declaration example in earlier post and redefine `print` functions using function expression syntax.
 
 ```javascript
 var print = function (input) {
     console.log("Print was called with value " + input);
 }
+
 print(10);
+
 var print = function (input) {
     console.log("Redefining print with value " + input);
 }
+
 print(20);
 ```
 
@@ -64,21 +74,27 @@ As mentioned earlier, JavaScript engine hoists the function variables and not th
 
 ```javascript
 var print;
+
 print = function (input) {
     console.log("Print was called with value " + input);
 }
+
 print(10);
 
 //overrides print function declared earlier
 print = function (input) { 
     console.log("Redefining print with value " + input);
 }
+
 print(20);
 ```
 
 In this case, after calling `print` function `print(10)`, we are overriding `print` function definition, hence both the calls to `print` function will display output as shown below.
 
-** TODO - Add Image
+{% highlight ruby %}
+    Print was called with value  10
+    Redefining print with value  20
+{% endhighlight %}
 
 So that was a quick overview on function expression syntax in JavaScript. Coming up next is anonymous functions, stay tuned.
 
