@@ -5,6 +5,8 @@ categories:
 tags:
   - c#
   - javascript
+comments: true
+classes: wide
 # toc: true
 # toc_label: "Traps"
 # toc_icon: "cog"
