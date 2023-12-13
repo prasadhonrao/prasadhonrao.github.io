@@ -1,5 +1,5 @@
 ---
-title: Decoding the Deployment Dilemma: VMs or Containers
+title: Decoding the Deployment Dilemma - VMs or Containers
 categories:
   - Containers
 tags:
